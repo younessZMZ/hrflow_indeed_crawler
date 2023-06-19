@@ -4,19 +4,19 @@ This project contains three Python scripts that are used to scrape job postings 
 
 ## Scripts
 
-1. `JobScraper.py`: This script scrapes job postings from a specified website. It uses Selenium to navigate the website and BeautifulSoup to parse the HTML and extract information about each job. The extracted information includes the job title, location, company, summary, and URL.
+1. `job_scraper.py`: This script scrapes job postings from a specified website. It uses Selenium to navigate the website and BeautifulSoup to parse the HTML and extract information about each job. The extracted information includes the job title, location, company, summary, and URL.
 
-2. `JobDetailScraper.py`: This script takes the URLs of job postings scraped by the `JobScraper.py` script and visits each URL to extract more detailed information about each job. It uses Selenium to navigate to each job posting and BeautifulSoup to parse the HTML and extract the job description and salary information.
+2. `job_detail_scraper.py`: This script takes the URLs of job postings scraped by the `job_scraper.py` script and visits each URL to extract more detailed information about each job. It uses Selenium to navigate to each job posting and BeautifulSoup to parse the HTML and extract the job description and salary information.
 
-3. `JobIndexer.py`: This script takes the detailed job information scraped by the `JobDetailScraper.py` script and indexes it to the Hrflow API. It uses the Hrflow client to interact with the Hrflow API.
+3. `job_indexer.py`: This script takes the detailed job information scraped by the `job_scraper.py` and `job_detail_scraper.py` scripts and indexes it to the Hrflow API. It uses the Hrflow client to interact with the Hrflow API.
 
 ## Classes
 
-1. `JobScraper`: This class is defined in the `JobScraper.py` script. It contains methods for navigating the website, scraping job postings, and saving the scraped information to a file.
+1. `JobScraper`: This class is defined in the `job_scraper.py` script. It contains methods for navigating the website, scraping job postings, and saving the scraped information to a file.
 
-2. `JobDetailScraper`: This class is defined in the `JobDetailScraper.py` script. It contains methods for navigating to each job posting, scraping detailed job information, and saving the scraped information to a file.
+2. `JobDetailScraper`: This class is defined in the `job_detail_scraper.py` script. It contains methods for navigating to each job posting, scraping detailed job information, and saving the scraped information to a file.
 
-3. `JobIndexer`: This class is defined in the `JobIndexer.py` script. It contains methods for loading the scraped job information, formatting it for the Hrflow API, and indexing it to the Hrflow API.
+3. `JobIndexer`: This class is defined in the `job_indexer.py` script. It contains methods for loading the scraped job information, formatting it for the Hrflow API, and indexing it to the Hrflow API.
 
 ## Usage
 
@@ -38,7 +38,7 @@ To use these scripts, you will need to install the required Python libraries, wh
 
 Once you have installed the required libraries and set up your `.env` file, you can run the scripts in the following order:
 
-1. Run `JobScraper.py` to scrape job postings from the website.
-2. Run `JobDetailScraper.py` to scrape detailed job information.
-3. Run `JobIndexer.py` to index the job information to the Hrflow API.
+1. Run `job_scraper.py` to scrape job postings from the website.
+2. Run `job_detail_scraper.py` to scrape detailed job information.
+3. Run `job_indexer.py` to index the job information to the Hrflow API.
 
